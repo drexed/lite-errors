@@ -22,7 +22,7 @@ module Lite
         @errors[key].uniq!
       end
 
-      alias_method :add, :[]=
+      alias add []=
 
       def added?(key, val)
         return false unless key?(key)
@@ -50,7 +50,7 @@ module Lite
         @errors.empty?
       end
 
-      alias_method :blank?, :empty?
+      alias blank? empty?
 
       def full_message(key, value)
         "#{key} #{value}"
@@ -62,7 +62,7 @@ module Lite
         end
       end
 
-      alias_method :to_a, :full_messages
+      alias to_a full_messages
 
       def full_messages_for(key)
         return [] unless key?(key)
@@ -74,8 +74,8 @@ module Lite
         @errors.key?(key)
       end
 
-      alias_method :has_key?, :key?
-      alias_method :include?, :key?
+      alias has_key? key?
+      alias include? key?
 
       def keys
         @errors.keys
@@ -97,7 +97,7 @@ module Lite
         @errors.size
       end
 
-      alias_method :count, :size
+      alias count size
 
       def to_hash(full_messages = false)
         return @errors unless full_messages
@@ -107,8 +107,8 @@ module Lite
         end
       end
 
-      alias_method :messages, :to_hash
-      alias_method :as_json, :to_hash
+      alias messages to_hash
+      alias as_json to_hash
 
       def values
         @errors.values

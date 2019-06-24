@@ -1,8 +1,0 @@
----
-detectors:
-  IrresponsibleModule:
-    enabled: false
-  UncommunicativeMethodName:
-    enabled: false
-  UncommunicativeVariableName:
-    enabled: false

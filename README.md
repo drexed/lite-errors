@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/drexed/lite-errors.svg?branch=master)](https://travis-ci.org/drexed/lite-errors)
 
 Lite::Errors provides an API for generating and accessing Ruby errors in an ActiveModel::Errors compliant format.
+If you are coming from `ActiveErrors`, please read the [port](#port) section.
 
 ## Installation
 
@@ -20,6 +21,16 @@ And then execute:
 Or install it yourself as:
 
     $ gem install lite-errors
+
+## Table of Contents
+
+* [Port](#port)
+* [Usage](#usage)
+
+## Port
+
+`Lite::Errors` is compatible port of [ActiveErrors](https://github.com/drexed/active_errors).
+Switching is as easy as renaming `ActiveError::Messages` to `Lite::Errors::Messages`.
 
 ## Usage
 

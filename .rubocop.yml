@@ -7,5 +7,16 @@ AllCops:
   DisplayStyleGuide: true
 LineLength:
   Max: 100
+Layout/EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'spec/**/**/*'
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/**/*'
+    - 'lite-errors.gemspec'
+Style/Documentation:
+  Enabled: false
 Style/ExpandPathArguments:
   Enabled: false
