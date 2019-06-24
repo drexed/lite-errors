@@ -15,7 +15,7 @@ Layout/EmptyLinesAroundClassBody:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/**/*'
-    - 'lite-errors.gemspec'
+    - '*.gemspec'
 Style/Documentation:
   Enabled: false
 Style/ExpandPathArguments:
