@@ -30,6 +30,8 @@ module Lite
         @errors[key].include?(val)
       end
 
+      alias of_kind? added?
+
       def clear
         @errors.clear
       end
@@ -98,6 +100,11 @@ module Lite
       end
 
       alias count size
+
+      def slice!(key)
+        delete(key)
+        @errors
+      end
 
       def to_hash(full_messages = false)
         return @errors unless full_messages

@@ -57,11 +57,10 @@ RSpec.describe Lite::Errors::Messages do
   end
 
   describe '.delete' do
-    it 'returns {}' do
+    it 'returns "error message"' do
       klass.add(:field, 'error message')
-      klass.delete(:field)
 
-      expect(klass.errors).to eq({})
+      expect(klass.delete(:field)).to eq(['error message'])
     end
   end
 
@@ -160,6 +159,14 @@ RSpec.describe Lite::Errors::Messages do
       klass.add(:field, 'error message')
 
       expect(klass.size).to eq(1)
+    end
+  end
+
+  describe '.slice!' do
+    it 'returns {}' do
+      klass.add(:field, 'error message')
+
+      expect(klass.slice!(:field)).to eq({})
     end
   end
 
