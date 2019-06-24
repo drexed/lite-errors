@@ -3,7 +3,7 @@ sudo: false
 language: ruby
 before_install:
   - gem update --system
-  - rvm @default,@global do gem uninstall bundler -v 2.0.1 -x
+  - gem install bundler
 cache: bundler
 rvm:
   - 2.5
@@ -16,4 +16,4 @@ matrix:
 install:
   - bundle install --jobs=3 --retry=3
 script:
- — bundle exec rspec
+  - bundle exec rspec
