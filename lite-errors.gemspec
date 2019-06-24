@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors = ['Juan Gomez']
   spec.email = %w[j.gomez@drexed.com]
 
-  spec.summary = 'Build ActiveModel::Errors like error in Ruby'
+  spec.summary = 'Build ActiveModel::Errors like errors in Ruby'
   spec.homepage = 'http://drexed.github.io/lite-errors'
   spec.license = 'MIT'
 

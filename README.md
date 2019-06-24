@@ -6,7 +6,7 @@
 Lite::Errors provides an API for generating and accessing error messages.
 There are few handy methods for interacting with errors so we encourage you to look through the lib files.
 
-*NOTE:* If you are coming from `ActiveErrors`, please read the [port](#port) section.
+**NOTE:** If you are coming from `ActiveErrors`, please read the [port](#port) section.
 
 ## Installation
 
