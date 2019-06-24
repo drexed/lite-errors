@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors = ['Juan Gomez']
   spec.email = %w[j.gomez@drexed.com]
 
-  spec.summary = 'Build simple cache and memoization in Ruby'
+  spec.summary = 'Build ActiveModel::Errors like error in Ruby'
   spec.homepage = 'http://drexed.github.io/lite-errors'
   spec.license = 'MIT'
 
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
     spec.metadata.merge(
       'allowed_push_host' => 'https://rubygems.org',
-      # 'changelog_uri' => 'https://github.com/drexed/lite-errors/blob/master/CHANGELOG.md',
+      'changelog_uri' => 'https://github.com/drexed/lite-errors/blob/master/CHANGELOG.md',
       'homepage_uri' => spec.homepage,
       'source_code_uri' => 'https://github.com/drexed/lite-errors'
     )

@@ -1,8 +1,9 @@
 # Lite::Errors
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/lite/errors`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Gem Version](https://badge.fury.io/rb/lite-errors.svg)](http://badge.fury.io/rb/lite-errors)
+[![Build Status](https://travis-ci.org/drexed/lite-errors.svg?branch=master)](https://travis-ci.org/drexed/lite-errors)
 
-TODO: Delete this and the text above, and describe your gem
+Lite::Errors provides an API for generating and accessing Ruby errors in an ActiveModel::Errors compliant format.
 
 ## Installation
 
@@ -22,7 +23,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class Shipment
+
+  def errors
+    @errors ||= Lite::Errors::Messages.new
+  end
+
+  def messages
+    @errors.full_messages
+  end
+
+  def process
+    ShipmentItem.each do |item|
+      item.add_to_box!
+    rescue Shipment::OutOfStock => e
+      errors.add(item.name, I18n.t('errors.out_of_stock'))
+    rescue Shipment::DoesNotExist => e
+      errors[item.name] = I18n.t('errors.does_not_exist')
+    rescue ActiveRecord::RecordInvalid
+      errors.merge!(item.errors)
+    end
+  end
+
+end
+```
 
 ## Development
 

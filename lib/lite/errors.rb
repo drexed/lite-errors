@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require 'lite/errors/version'
-
-module Lite
-  module Errors
-    class Error < StandardError; end
-    # Your code goes here...
-  end
+%w[version messages].each do |name|
+  require "lite/errors/#{name}"
 end

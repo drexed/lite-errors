@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lite-errors (0.1.0)
+    lite-errors (1.0.0)
 
 GEM
   remote: https://rubygems.org/
