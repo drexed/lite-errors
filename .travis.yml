@@ -16,5 +16,5 @@ before_install:
 install:
   - bundle install --retry 3 --jobs 8
 script:
-  — bundle exec rspec
-  # — bundle exec fasterer
+  — rspec
+  # — fasterer
