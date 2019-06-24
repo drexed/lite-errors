@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 RSpec.describe Lite::Errors::Messages do
-  subject(:klass) { described_class.new }
+  let(:klass) { described_class.new }
 
   describe '.initialize' do
     it 'returns []' do
