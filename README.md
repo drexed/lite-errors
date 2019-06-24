@@ -3,8 +3,8 @@
 [![Gem Version](https://badge.fury.io/rb/lite-errors.svg)](http://badge.fury.io/rb/lite-errors)
 [![Build Status](https://travis-ci.org/drexed/lite-errors.svg?branch=master)](https://travis-ci.org/drexed/lite-errors)
 
-Lite::Errors provides an API for generating and accessing Ruby errors in an ActiveModel::Errors compliant format.
-It also includes a few extra handy methods for interacting with errors so we encourage you to look through the lib files.
+Lite::Errors provides an API for generating and accessing error messages.
+There are few handy methods for interacting with errors so we encourage you to look through the lib files.
 
 *NOTE:* If you are coming from `ActiveErrors`, please read the [port](#port) section.
 
@@ -52,7 +52,7 @@ class Shipment
     ShipmentItem.each do |item|
       item.add_to_box!
     rescue Shipment::OutOfStock => e
-      errors.add(item.name, I18n.t('errors.out_of_stock'))
+      errors.add(item.name, :out_of_stock)
     rescue Shipment::DoesNotExist => e
       errors[item.name] = I18n.t('errors.does_not_exist')
     rescue ActiveRecord::RecordInvalid
