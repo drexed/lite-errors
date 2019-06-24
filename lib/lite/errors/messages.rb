@@ -101,8 +101,8 @@ module Lite
 
       alias count size
 
-      def slice!(key)
-        delete(key)
+      def slice!(*keys)
+        keys.each { |key| delete(key) }
         @errors
       end
 
