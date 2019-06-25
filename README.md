@@ -26,14 +26,8 @@ Or install it yourself as:
 
 ## Table of Contents
 
-* [Port](#port)
 * [Usage](#usage)
-
-## Port
-
-`Lite::Errors` is compatible port of [ActiveErrors](https://github.com/drexed/active_errors).
-
-Switching is as easy as renaming `ActiveError::Messages` to `Lite::Errors::Messages`.
+* [Port](#port)
 
 ## Usage
 
@@ -62,6 +56,12 @@ class Shipment
 
 end
 ```
+
+## Port
+
+`Lite::Errors` is compatible port of [ActiveErrors](https://github.com/drexed/active_errors).
+
+Switching is as easy as renaming `ActiveError::Messages` to `Lite::Errors::Messages`.
 
 ## Development
 
