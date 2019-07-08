@@ -59,7 +59,7 @@ end
 
 ## Port
 
-`Lite::Errors` is compatible port of [ActiveErrors](https://github.com/drexed/active_errors).
+`Lite::Errors` is a compatible port of [ActiveErrors](https://github.com/drexed/active_errors).
 
 Switching is as easy as renaming `ActiveError::Messages` to `Lite::Errors::Messages`.
 
