@@ -106,6 +106,7 @@ module Lite
         @errors
       end
 
+      # rubocop:disable Style/OptionalBooleanParameter
       def to_hash(full_messages = false)
         return @errors unless full_messages
 
@@ -113,6 +114,7 @@ module Lite
           memo[key] = arr.map { |val| full_message(key, val) }
         end
       end
+      # rubocop:enable Style/OptionalBooleanParameter
 
       alias messages to_hash
       alias as_json to_hash
