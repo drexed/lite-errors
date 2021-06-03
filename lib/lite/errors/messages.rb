@@ -16,6 +16,8 @@ module Lite
         @errors[key]
       end
 
+      alias messages_for []
+
       def []=(key, value)
         @errors[key] ||= []
         @errors[key] << value
@@ -83,6 +85,8 @@ module Lite
         @errors.keys
       end
 
+      alias attribute_names keys
+
       def merge!(hash)
         @errors.merge!(hash) do |_, arr1, arr2|
           arr3 = arr1 + arr2
@@ -117,6 +121,7 @@ module Lite
       # rubocop:enable Style/OptionalBooleanParameter
 
       alias messages to_hash
+      alias group_by_attribute to_hash
       alias as_json to_hash
 
       def values

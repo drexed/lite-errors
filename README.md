@@ -4,7 +4,9 @@
 [![Build Status](https://travis-ci.org/drexed/lite-errors.svg?branch=master)](https://travis-ci.org/drexed/lite-errors)
 
 Lite::Errors provides an API for generating and accessing error messages.
-There are few handy methods for interacting with errors so we encourage you to look through the lib files.
+The API is ~90% compatible with `ActiveModel::Errors` and there are few
+extra handy methods for interacting with errors so we encourage you to
+look through the lib files.
 
 **NOTE:** If you are coming from `ActiveErrors`, please read the [port](#port) section.
 
