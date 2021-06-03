@@ -4,8 +4,9 @@
 [![Build Status](https://travis-ci.org/drexed/lite-errors.svg?branch=master)](https://travis-ci.org/drexed/lite-errors)
 
 Lite::Errors provides an API for generating and accessing error messages.
-The API is ~90% compatible with `ActiveModel::Errors` and there are few
-extra handy methods for interacting with errors so we encourage you to
+The API is ~90% compatible with `ActiveModel::Errors` except that it returns
+hashes instead of error objects (use Rails =< 6.0 documentation). There are
+few extra handy methods for interacting with errors so we encourage you to
 look through the lib files.
 
 **NOTE:** If you are coming from `ActiveErrors`, please read the [port](#port) section.
