@@ -2,7 +2,7 @@ require:
   - rubocop-performance
   - rubocop-rspec
 AllCops:
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.0
   NewCops: enable
   DisplayCopNames: true
   DisplayStyleGuide: true
@@ -29,6 +29,8 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/**/*'
     - '*.gemspec'
+Style/ArgumentsForwarding:
+  Enabled: false
 Style/Documentation:
   Enabled: false
 Style/ExpandPathArguments:
