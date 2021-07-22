@@ -1,5 +1,4 @@
 # frozen_string_literal: true
 
-%w[version messages].each do |name|
-  require "lite/errors/#{name}"
-end
+require 'lite/errors/version'
+require 'lite/errors/messages'
